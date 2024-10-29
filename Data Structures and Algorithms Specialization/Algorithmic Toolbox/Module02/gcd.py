@@ -21,7 +21,7 @@ arr.sort(reverse=True)
 gcd_euclid = gcd_euclid(arr)
 gcd_naive = gcd_naive(arr)
 
-print(gcd_naive,gcd_euclid)
+print(gcd_euclid)
 
 
 

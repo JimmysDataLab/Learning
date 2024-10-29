@@ -1,14 +1,21 @@
 #include<iostream>
+// #include <boost/multiprecision/cpp_int.hpp>
+
+
+// using namespace boost::multiprecision;
 using namespace std;
 
 
-unsigned long long fibonacci(int n){
 
-    
+
+
+
+
+int fib_last_digit(int n){    
     // initialize
-    unsigned long long a = 0;
-    unsigned long long b = 1;
-    unsigned long long temp;
+    int a = 0;
+    int b = 1;
+    int temp;
     if(n == 0) return 0;
     if(n == 1) return 1;
 
@@ -17,6 +24,8 @@ unsigned long long fibonacci(int n){
         temp = a;
         a = b;
         b = temp + b;
+        if(a>=10) a = a%10;
+        if(b>=10) b = b%10;
 
     }
 
@@ -25,6 +34,6 @@ unsigned long long fibonacci(int n){
 int main(){
     int n;
     cin>>n;
-    cout<<fibonacci(n)<<endl;
+    cout<<fib_last_digit(n)<<endl;
     return 0;
 }

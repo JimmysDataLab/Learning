@@ -2,9 +2,8 @@
 using namespace std;
 
 
-unsigned long long fibonacci(int n){
 
-    
+unsigned long long fib_mod(unsigned long long n, unsigned long long d){    
     // initialize
     unsigned long long a = 0;
     unsigned long long b = 1;
@@ -13,18 +12,20 @@ unsigned long long fibonacci(int n){
     if(n == 1) return 1;
 
     // loop
-    for(int i=2;i<=n;++i){
+    for(unsigned long long i=2;i<=n;++i){
         temp = a;
         a = b;
         b = temp + b;
-
+        a = a%d;
+        b = b%d;
     }
 
     return b;
 }
 int main(){
-    int n;
+    unsigned long long n, d;
     cin>>n;
-    cout<<fibonacci(n)<<endl;
+    cin>>d;
+    cout<<fib_mod(n,d)<<endl;
     return 0;
 }

@@ -4,7 +4,6 @@ using namespace std;
 
 enum class OrderBookOptions{ask,bid};
 
-
 class OrderBookEntry{
     public:
         string timestamp;

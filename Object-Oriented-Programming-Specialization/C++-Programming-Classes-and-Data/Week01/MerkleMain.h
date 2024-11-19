@@ -15,5 +15,6 @@ class MerkleApp{
         void PlaceBid();
         void PrintWallet();
 
+    
         
 };
